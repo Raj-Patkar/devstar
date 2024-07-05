@@ -190,7 +190,7 @@ function unpinNote(id) {
 <div class="flex h-screen">
     <aside class="w-64 bg-gray-800 text-white p-6 shadow-lg flex flex-col items-start gap-6">
         <button on:click={addNote} class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full">Add Note</button>
-        <span class="text-sm font-medium">Select Color:</span>
+        <span class="text-sm font-medium">Select Color:<div class="selected-color-box" id="selectedColorBox"></div></span>
         <div class="flex gap-2 mt-2">
             <button class="w-8 h-8 rounded-full cursor-pointer hover:border-black border-2 color-button" style="background-color: #fbd38d" on:click={() => changeColor("#fbd38d")}></button>
             <button class="w-8 h-8 rounded-full cursor-pointer hover:border-black border-2 color-button" style="background-color: #fca5a5" on:click={() => changeColor("#fca5a5")}></button>
@@ -293,5 +293,12 @@ function unpinNote(id) {
         display: inline-flex;
         align-items: center;
         gap: 0.25rem;
-    }
+    } .selected-color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border: 1px solid white;
+            vertical-align: middle;
+        }
 </style>
